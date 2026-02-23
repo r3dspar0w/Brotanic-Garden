@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Care Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+  <main class="quiz-shell">
+    <audio id="gameMusic" src="assets/audio/game_music.mp3" loop preload="auto"></audio>
+    <section id="quizPanel" class="panel" aria-live="polite">
+      <div class="progress-track">
+        <div id="progressBar" class="progress-fill"></div>
+      </div>
+      <p id="questionCount" class="count"></p>
+      <h1 id="questionText"></h1>
+      <div id="answers" class="answers"></div>
+    </section>
+
+    <section id="resultPanel" class="panel result-panel hidden" aria-live="polite">
+      <div class="confetti" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <h2>Congratulations!</h2>
+      <p class="subtitle">You finished the Plant Care Quiz</p>
+      <div class="voucher-card">
+        <p id="scoreLine" class="score-line"></p>
+        <p id="voucherLine" class="voucher-line"></p>
+        <p class="redirect-line">Redirecting to dashboard in <span id="countdown">6</span>s</p>
+      </div>
+      <a class="back-btn" href="index.html">Back to Garden Dashboard</a>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

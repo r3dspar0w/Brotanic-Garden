@@ -1,0 +1,142 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brotanic Garden</title>
+  <link href="https://fonts.cdnfonts.com/css/jurassic-park" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="dashboard">
+    <header class="hero-shell">
+      <div class="hero-action hero-action-left">
+        <div class="hero-left-buttons">
+          <div class="hero-mini-action">
+            <button id="openAirQualityBtn" class="action-pill analyze-pill" type="button" aria-label="Analyze Singapore air quality">
+              <span class="analyze-pill-text">Analyze<br/>Singapore</span>
+            </button>
+            <span class="hero-action-label">air quality map</span>
+          </div>
+          <div class="hero-mini-action">
+            <button id="introMusicBtn" class="action-pill" type="button" aria-label="Play intro music">
+              <span class="icon icon-play"></span>
+            </button>
+            <span class="hero-action-label">play into music</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero">
+        <div class="hero-title">
+          <h1>BROTANIC GARDEN</h1>
+          <p>done by meena, justin, nathan and terence</p>
+        </div>
+      </div>
+      <div class="hero-action hero-action-right">
+        <div class="hero-right-buttons">
+          <div class="hero-mini-action">
+            <a class="action-pill" href="game.html" aria-label="Play game">
+              <span class="icon icon-game"></span>
+            </a>
+            <span class="hero-action-label">play game</span>
+          </div>
+          <div class="hero-mini-action">
+            <button id="openManualBtn" class="manual-btn" type="button" aria-label="Open instruction manual">
+              instruction manual
+            </button>
+            <span class="hero-action-label">open guide</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="plants-section">
+      <div class="section-head">
+        <h2>YOUR PLANT</h2>
+      </div>
+
+      <div class="plant-grid">
+        <article class="plant-card active" data-plant="water_lily" role="button" tabindex="0" aria-pressed="true">
+          <img class="thumb" src="assets/images/water_lily.png" alt="Water lily" />
+          <h3>water lily</h3>
+        </article>
+        <article class="plant-card" data-plant="peace_lily" role="button" tabindex="0" aria-pressed="false">
+          <img class="thumb" src="assets/images/peace_lily.png" alt="Peace lily" />
+          <h3>peace lily</h3>
+        </article>
+        <article class="plant-card" data-plant="spider_lily" role="button" tabindex="0" aria-pressed="false">
+          <img class="thumb" src="assets/images/spider_lily.png" alt="Spider lily" />
+          <h3>spider lily</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="growth-section">
+      <h2>TRACK UR GROWTH</h2>
+      <div class="growth-strip" aria-label="Plant growth timeline">
+        <img class="growth-card" data-day="1" src="assets/images/day1_water_lily.jpg" alt="Water lily day 1" role="button" tabindex="0" aria-pressed="false" />
+        <img class="growth-card active" data-day="2" src="assets/images/day2_water_lily.jpg" alt="Water lily day 2" role="button" tabindex="0" aria-pressed="true" />
+        <img class="growth-card" data-day="3" src="assets/images/day3_water_lily.jpg" alt="Water lily day 3" role="button" tabindex="0" aria-pressed="false" />
+        <img class="growth-card" data-day="4" src="assets/images/day4_water_lily.jpg" alt="Water lily day 4" role="button" tabindex="0" aria-pressed="false" />
+        <img class="growth-card" data-day="5" src="assets/images/day5_water_lily.jpg" alt="Water lily day 5" role="button" tabindex="0" aria-pressed="false" />
+      </div>
+      <div class="growth-labels">
+        <span>day 1</span>
+        <span>day 2</span>
+        <span>day 3</span>
+        <span>day 4</span>
+        <span>day 5</span>
+      </div>
+    </section>
+
+    <section class="stats-row">
+      <article>
+        <h2>Door status :</h2>
+        <p class="door-state">
+          <span id="doorStatusBadge" class="state-badge state-close">CLOSE</span>
+          <span class="state-sep">|</span>
+          <span id="doorWhoBadge" class="state-badge role-user">NONE</span>
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <div id="introCurtain" class="intro-curtain" aria-hidden="true">
+    <div class="intro-curtain-panel intro-curtain-left"></div>
+    <div class="intro-curtain-panel intro-curtain-right"></div>
+    <div class="intro-curtain-text" aria-hidden="true">
+      <h2>WELCOME TO BROTANIC GARDEN</h2>
+      <p>Grow. Learn and Play</p>
+    </div>
+    <div class="intro-confetti hidden" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <audio id="introMusic" src="assets/audio/intro.mp3.mpeg" preload="auto"></audio>
+
+  <dialog id="manualDialog" class="manual-dialog" aria-labelledby="manualTitle">
+    <form method="dialog" class="manual-close-row">
+      <button class="manual-close-btn" value="close" aria-label="Close instruction manual">Close</button>
+    </form>
+    <h2 id="manualTitle">INSTRUCTION MANUAL</h2>
+    <img src="assets/images/instruction_manual.jpeg" alt="Instruction manual" class="manual-image" />
+  </dialog>
+
+  <dialog id="airQualityDialog" class="airq-dialog" aria-labelledby="airQualityTitle">
+    <form method="dialog" class="manual-close-row">
+      <button class="manual-close-btn" value="close" aria-label="Close air quality panel">Close</button>
+    </form>
+    <h2 id="airQualityTitle">AIR QUALITY IN SINAGPORE</h2>
+    <div id="airqMap" class="airq-map" role="img" aria-label="Singapore air quality map"></div>
+    <p id="airqRecommendation" class="airq-recommendation"></p>
+    <ol id="airqTop3" class="airq-list"></ol>
+  </dialog>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
