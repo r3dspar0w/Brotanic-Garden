@@ -1,6 +1,6 @@
 # 🌿🐢 Brotanic Gardens — MAPP Project
 
-![Instruction Manual](instructionmanual/instruction_manual.jpg)
+![Instruction Manual](instruction manual)
 
 An interactive **Smart Greenhouse / Smart Garden System** developed for the MAPP project.  
 The system integrates **STM32 embedded hardware**, a **local web dashboard**, and a **Telegram bot** to monitor and control plant conditions in real time.
