@@ -9,7 +9,7 @@ The system integrates **STM32 embedded hardware**, a **local web dashboard**, an
 
 ## 📽 Demo Video
 Watch the full demonstration here:  
-https://youtu.be/MdiBvYiozMI?si=ZQaVtsXMWabsImn7
+https://youtu.be/IM8WN9mi-rQ
 
 ---
 
